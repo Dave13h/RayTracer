@@ -1,0 +1,17 @@
+SVN REV 20: SDL Threads
+		i7 12 threads @4.5	=	~92fps 0.011959s
+SVN REV 21: std::threads
+		i7 12 threads @4.5	=	~98fps 0.010343s
+		i5  4 threads @3.0 	=	~60fps 0.017326s
+
+SVN REV 30: PreRecursion
+		i7 12 threads @4.5	=	~75-81fps 0.013s
+SVN REV 31: Recursion
+		i7 12 threads @4.5	=	~65-67fps 0.015s
+
+
+----- Job Queue Edition -----
+
+FTime	FPS		Cores	CPU Time	Desc
+---------------------------------------------------------------
+~25ms 	~36fps	4		65%			4 Static Threads / No Jobs
