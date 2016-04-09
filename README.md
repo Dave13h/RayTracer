@@ -17,14 +17,14 @@ pretty much the SDL DLLs.
 - zlib.dll
 
 # Runtime options
-
+```
 -b<Number of bounces>       - Max number of bounces
 -h<height>                  - Window Height
 -i                          - Interlace Mode
 -r                          - Realtime Mode
 -t<Number of threads>       - Number of threads to spawn
 -w<width>                   - Window Width
-
+```
 # Font
 
 http://www.1001fonts.com/carrois-gothic-font.html
