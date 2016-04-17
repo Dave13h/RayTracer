@@ -20,8 +20,8 @@ class cShape {
 class cPlane : public cShape {
 	public:
 		vec3 normal;
-	
-		cPlane::cPlane(vec3 p, vec3 n, vec3 c);
+
+		cPlane(vec3 p, vec3 n, vec3 c);
 
 		bool intersect(cRay *ray, hit_t &hit);
 		vec3 getColor(hit_t hit);
@@ -37,7 +37,7 @@ class cQuad : public cShape {
 		vec3 tu, tv, tu2, tv2;
 		float uu, uv, vv, uu2, uv2, vv2, d, d2;
 
-		cQuad::cQuad(vec3 p, vec3 v1, vec3 v2, vec3 v3, vec3 v4, vec3 c);
+		cQuad(vec3 p, vec3 v1, vec3 v2, vec3 v3, vec3 v4, vec3 c);
 
 		bool intersect(cRay *ray, hit_t &hit);
 		vec3 getColor(hit_t hit);
@@ -47,8 +47,8 @@ class cQuad : public cShape {
 class cSphere : public cShape {
 	public:
 		float radius;
-	
-		cSphere::cSphere(vec3 p, float r, vec3 c);
+
+		cSphere(vec3 p, float r, vec3 c);
 
 		bool intersect(cRay *ray, hit_t &hit);
 		vec3 getColor(hit_t hit);

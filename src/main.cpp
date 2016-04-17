@@ -49,7 +49,7 @@ extern unsigned int r_regions;
 extern std::vector<region_t> regions;
 extern std::vector<thread_t> threads;
 
-std::atomic<int> threadCount = 0;
+std::atomic<int> threadCount;
 std::mutex frameMutex;
 std::condition_variable frameCond;
 
@@ -215,6 +215,8 @@ void inputCheck(const cTimer *timer) {
 // Main loop
 // ----------------------------
 int main(int argc, char *argv[]) {
+	threadCount = 0;
+
 	SDL_Init(SDL_INIT_EVERYTHING);
 	r_regions = std::thread::hardware_concurrency();
 
@@ -426,7 +428,7 @@ int main(int argc, char *argv[]) {
 
 			if (!jMan.jCondition.wait_for(frameLock, std::chrono::milliseconds(1000),
 				[&jMan]{ return (jMan.jobCount == 0); })) {
-				printf("%d Thread(s) stalled!\n", jMan.jobCount);
+				//printf("%d Thread(s) stalled!\n", jMan.jobCount);
 			}
 
 			frameLock.unlock();

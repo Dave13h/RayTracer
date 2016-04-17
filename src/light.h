@@ -9,7 +9,7 @@ class cLight {
 		vec3 color;
 		float size;
 
-		cLight::cLight(vec3 p, vec3 c, float s);
+		cLight(vec3 p, vec3 c, float s);
 };
 
 #endif
