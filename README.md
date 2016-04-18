@@ -1,9 +1,12 @@
 # RayTracer
 
-A Basic RayTracer using C++11 Threads and SDL
+A well meaning RayTracer using C++11 Threads and SDL.
 
-# The build file is pretty janky..
+![Raytraced balls... ofcourse](screenshot.png)
 
+## The build file is pretty janky..
+
+### Windows
 Yeah, its a Windows batch file that uses Visual Studio's cl.exe,
 the dependancies location is hardwired and all that. Just look in the
 build.bat :poop:
@@ -16,7 +19,11 @@ pretty much the SDL DLLs.
 - SDL2_ttf.dll
 - zlib.dll
 
-# Runtime options
+### Unixy things
+Well it was tested on clang, anyway. There is a classic Makefile you
+can twiddle with. Make sure you have SDL2[_image|_ttf] installed.
+
+## Runtime options
 ```
 -b<Number of bounces>       - Max number of bounces
 -h<height>                  - Window Height
@@ -25,7 +32,23 @@ pretty much the SDL DLLs.
 -t<Number of threads>       - Number of threads to spawn
 -w<width>                   - Window Width
 ```
-# Font
+
+## Controls
+
+```
+- WASDQE        			- Move Camera
+- Arrowkeys     			- Angle Camera
+- Space         			- Next frame (when not running realtime)
+- 1-4           			- Set Scaling
+- PAUSE         			- Toggle Realtime
+- I             			- Toggle Interlacing
+- O             			- Toggle Shaddows
+- R             			- Toggle Reflections
+- T             			- Toggle Threading Info
+- V             			- Toggle Vignette
+```
+
+## Font
 
 http://www.1001fonts.com/carrois-gothic-font.html
 
