@@ -1,3 +1,11 @@
+// ______
+// |  _  \
+// | | | |_ __ __ ___      __
+// | | | | '__/ _` \ \ /\ / /
+// | |/ /| | | (_| |\ V  V /
+// |___/ |_|  \__,_| \_/\_/
+// 							Functions
+
 #include "main.h"
 #include "camera.h"
 #include "draw.h"
@@ -210,7 +218,7 @@ int traceRay(cRay *cameraRay, vec3 *color, unsigned int depth,
 		for (int l = 0; l < scene->lightCount; ++l) {
 			light = scene->lights[l];
 			lDir = light->position - closestHit.point;
-			lDist = abs(lDir.length());
+			lDist = std::abs(lDir.length());
 
 			if (lDist > light->size)
 				continue;
@@ -383,7 +391,7 @@ void postProcessing(void) {
 					g = (float) ((pixel & 0x00ff0000) >> 16) / 255;
 					b = (float) ((pixel & 0xff000000) >> 24) / 255;
 
-					float fade = 1.0f - (abs(dist - hWidth) / (vignette * 2));
+					float fade = 1.0f - (std::abs(dist - hWidth) / (vignette * 2));
 					fade = std::min(std::max(0.0f, fade), 1.0f);
 
 					r *= fade;

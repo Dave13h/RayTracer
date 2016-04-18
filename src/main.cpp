@@ -1,3 +1,11 @@
+// ___  ___      _
+// |  \/  |     (_)
+// | .  . | __ _ _ _ __
+// | |\/| |/ _` | | '_ \
+// | |  | | (_| | | | | |
+// \_|  |_/\__,_|_|_| |_|
+//						 Functions
+
 #include "main.h"
 #include "draw.h"
 #include "jobmanager.h"

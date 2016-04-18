@@ -9,3 +9,6 @@ LIBS=-L/usr/local/lib -lm -lSDL2 -lSDL2_ttf -lSDL2_image
 
 all: $(OBJ_FILES)
 	$(CXX) $(CPPFLAGS) $(CXXFLAGS) $(LIBS) $^ -o raytracer
+
+clean:
+	rm *.o raytracer
