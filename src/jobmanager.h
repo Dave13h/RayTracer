@@ -27,8 +27,8 @@ class jobManager {
 		std::condition_variable jCondition;
 		std::mutex jMutex;
 
-		jobManager::jobManager(unsigned int wCount = 1);
-		jobManager::~jobManager(void);
+		jobManager(unsigned int wCount = 1);
+		~jobManager(void);
 
 		template<class F, class... Args>
 		auto addJob(F&& f, Args&&... args) ->

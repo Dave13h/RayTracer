@@ -1,3 +1,11 @@
+//  _____
+// /  __ \
+// | /  \/ __ _ _ __ ___   ___ _ __ __ _
+// | |    / _` | '_ ` _ \ / _ \ '__/ _` |
+// | \__/\ (_| | | | | | |  __/ | | (_| |
+//  \____/\__,_|_| |_| |_|\___|_|  \__,_|
+// 										 Class
+
 #include "camera.h"
 
 // ----------------------------
@@ -10,7 +18,7 @@ cCamera::cCamera(void) {
 
 	direction 	= vec3(0.0f, 0.0f, -1.0f);
 	direction.normalise();
-	
+
 	mat = mat4();
 
 	fov = 45.0f;
@@ -26,8 +34,8 @@ void cCamera::update(const double dt) {
 	if (angle.y > 360.0f)	angle.y -= 360.0f;
 	else if (angle.y < 0.0f)angle.y += 360.0f;
 
-	rot = 
-		quat4(DEG2RAD(angle.x), vec3(0.0f, 0.0f, 1.0f)) * 
+	rot =
+		quat4(DEG2RAD(angle.x), vec3(0.0f, 0.0f, 1.0f)) *
 		quat4(DEG2RAD(angle.y), vec3(0.0f, 1.0f, 0.0f));
 
 	mat = mat4(rot);

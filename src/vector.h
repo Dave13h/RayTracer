@@ -85,7 +85,7 @@ class vec2 {
 		void operator/=(vec2 in);
 		bool operator==(vec2 in);
 		bool operator!=(vec2 in);
-};	
+};
 
 class vec3 {
 	public:
@@ -119,39 +119,39 @@ class vec3 {
 
 		vec3 operator+(vec3 in);
 		void operator+=(vec3 in);
-		
+
 		vec3 operator-(vec3 in);
 		vec3 operator-(float in);
 
 		void operator-=(vec3 in);
 		vec3 operator-(void);
-		
+
 		vec3 operator*(vec3 in);
 		vec3 operator*(float in);
 		vec3 operator*(quat4 in);
 		void operator*=(vec3 in);
-		
+
 		vec3 operator/(vec3 in);
 		void operator/=(vec3 in);
 		void operator/=(float in);
-		
+
 		bool operator==(vec3 in);
 		bool operator!=(vec3 in);
 
 		// Methods
 		vec3 cross(vec3 in);
-		static vec3 vec3::cross(vec3 v1, vec3 v2);
-		static vec3 vec3::cross(quat4 v1, vec3 v2);
+		static vec3 cross(vec3 v1, vec3 v2);
+		static vec3 cross(quat4 v1, vec3 v2);
 
 		float dot(vec3 in);
 		static float dot(vec3 v1, vec3 v2);
 		float length();
 		static float length(vec3 in);
-		static vec3 vec3::max(vec3 in, float m);
-		static vec3 vec3::min(vec3 in, float m);
+		static vec3 max(vec3 in, float m);
+		static vec3 min(vec3 in, float m);
 		void normalise();
-		static vec3 vec3::pow(vec3 in, float p);
-		static vec3 vec3::reflect(vec3 in, vec3 normal);
+		static vec3 pow(vec3 in, float p);
+		static vec3 reflect(vec3 in, vec3 normal);
 };
 
 class ivec3 {
@@ -189,11 +189,11 @@ class ivec3 {
 		ivec3 operator-(ivec3 in);
 		void operator-=(ivec3 in);
 		ivec3 operator-(void);
-		
+
 		ivec3 operator*(ivec3 in);
 		ivec3 operator*(float in);
 		void operator*=(ivec3 in);
-		
+
 		ivec3 operator/(ivec3 in);
 		void operator/=(ivec3 in);
 
@@ -238,7 +238,7 @@ class ivec2 {
 		void operator/=(ivec2 in);
 		bool operator==(ivec2 in);
 		bool operator!=(ivec2 in);
-};	
+};
 
 struct hit_t {
 	vec3 point;

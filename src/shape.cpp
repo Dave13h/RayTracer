@@ -1,3 +1,12 @@
+//  _____ _
+// /  ___| |
+// \ `--.| |__   __ _ _ __   ___
+//  `--. \ '_ \ / _` | '_ \ / _ \
+// /\__/ / | | | (_| | |_) |  __/
+// \____/|_| |_|\__,_| .__/ \___|
+//                   | |		 Classes
+//                   |_|
+
 #include "shape.h"
 
 // -------------------------------------------------------------------------------------------------
@@ -13,7 +22,7 @@ cPlane::cPlane(vec3 p, vec3 n, vec3 c) {
 
 bool cPlane::intersect(cRay *ray, hit_t &hit) {
 	float denom = vec3::dot(normal, ray->direction);
-	if (abs(denom) > 0.0001f) {
+	if (std::abs(denom) > 0.0001f) {
 		float t = vec3::dot(position - ray->origin, normal) / denom;
 		if (t >= 0.0f) {
 			hit.point = ray->origin + (ray->direction * t);
@@ -69,7 +78,7 @@ cQuad::cQuad(vec3 p, vec3 v1, vec3 v2, vec3 v3, vec3 v4, vec3 c) {
 
 bool cQuad::intersect(cRay *ray, hit_t &hit) {
 	float b = vec3::dot(normal, ray->direction);
-	if (abs(b) < 0.00000001f)
+	if (std::abs(b) < 0.00000001f)
 		return false;
 
 	float r = -vec3::dot(normal, ray->origin - (position + v[0])) / b;

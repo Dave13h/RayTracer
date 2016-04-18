@@ -12,7 +12,7 @@ class cScene {
 		int shapeCount;
 		int lightCount;
 
-		cScene::cScene(void);
+		cScene(void);
 
 		void update(const double dt);
 };

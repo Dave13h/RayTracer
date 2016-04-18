@@ -5,12 +5,12 @@
 #include "vector.h"
 
 class mat4 {
-	public: 
+	public:
 		float m[4][4];
 
 		mat4(void);
 		mat4(const float in[4][4]);
-		mat4::mat4(const quat4 in);
+		mat4(const quat4 in);
 
 		mat4 operator*(const mat4 in);
 		vec3 operator*(const vec3 in);
